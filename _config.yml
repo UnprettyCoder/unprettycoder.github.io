@@ -8,10 +8,10 @@ logo:               'assets/img/logo1.png'
 background:         'assets/img/img1.jpeg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
-url:                https://unprettycoder.github.io/codelab
+url:                https://unprettycoder.github.io/
 
 # Jekyll
-permalink:          /:codelab/
+permalink:          /:title/
 markdown:           kramdown
 highlighter:        rouge
 kramdown:
