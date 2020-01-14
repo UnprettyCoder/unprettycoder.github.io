@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: java
 title: Java Language
 excerpt: "A List of Posts of java"
 comments: false
