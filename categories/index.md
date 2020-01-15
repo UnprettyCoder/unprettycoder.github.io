@@ -1,13 +1,17 @@
 {% capture site_categories %}{% for category in site.categories %}{{ category | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign categories_list = site_categories | split:',' | sort %}
 <ul class="entry-meta inline-list">
-  {% for item in (0..site.categories.size) %}{% unless forloop.last %}
+  {% for item in (0..site.categories.size) %}
+    {% unless forloop.last %}
     {% capture this_word %}{{ categories_list[item] | strip_newlines }}{% endcapture %}
-  	<li><a href="#{{ this_word }}" class="tag">
-    <span class="term">{{ this_word }}</span>
-    <span class="count">{{ site.categories[this_word].size }}</span>
-    </a></li>
-  {% endunless %}{% endfor %}
+  	<li>
+        <a href="#{{ this_word }}" class="tag">
+        <span class="term">{{ this_word }}</span>
+        <span class="count">{{ site.categories[this_word].size }}</span>
+        </a>
+    </li>
+    {% endunless %}
+  {% endfor %}
 </ul>
 
 {% for item in (0..site.categories.size) %}{% unless forloop.last %}
