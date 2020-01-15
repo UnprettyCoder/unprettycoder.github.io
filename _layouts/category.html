@@ -22,9 +22,8 @@ layout: compress
                     </a>
                 </div>
                 <div class="post-list">
-                    {% assign category = page.category | default: page.title %}
-                    {% for post in site.categories[category] %}
-                        {% if post.project == null %}
+                    {% for post in posts %}
+                        {% if post.project == null && "java" in post.categories %}
                     <ul>
                         <li class="wow fadeInLeft" data-wow-duration="1.5s">
                             <a class="zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
