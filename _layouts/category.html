@@ -22,8 +22,8 @@ layout: compress
                     </a>
                 </div>
                 <div class="post-list">
-                    {% for post in site.posts %} 
-                        {% if post.project == null && site.url[site.url[:site.url.rfind("/")].rfind("/")+1:site.url.rfind("/")] in post.tags %}
+                    {% for post in site.tags[site.url[site.url[:site.url.rfind("/")].rfind("/")+1:site.url.rfind("/")]] %} 
+                        {% if post.project == null %}
                     <ul>
                         <li class="wow fadeInLeft" data-wow-duration="1.5s">
                             <a class="zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
