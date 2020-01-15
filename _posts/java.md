@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Java test"
+date: 2020-01-15
+excerpt: "test file"
+tags: [java]
+comments: true
+---
+
+java category test
