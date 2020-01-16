@@ -3,7 +3,7 @@ layout: post
 title: Network Basic
 date: 2020-01-17
 excerpt: "Computer Network Background Knowledge"
-category: [others]
+category: [Network]
 comment: true
 ---
 
