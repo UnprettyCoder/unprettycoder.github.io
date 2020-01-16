@@ -9,7 +9,8 @@ comments: false
 <center><b>Code Lab</b> is my blog for writing something learned.</center>
 
 ## About me
-![myProfile](https://github.com/UnprettyCoder/unprettycoder.github.io/tree/master/assets/img/profile.jpg)
+![myProfile](assets/img/profile.jpg)
+|:---:|:---:|
 |`Admin`|UnprettyCoder|
 |`Age`|25|
 |`Major`|Industrial Engineering|
@@ -17,7 +18,7 @@ comments: false
 ## Contents
 
 |Computer-Science|Industrial-Engineering|Others|
-|---|:---:|---:|
+|---|---|---|
 |JAVA|O.R.|NETWORK|
 |C|Statistics|Accountancy|
 |PYTHON|E.E.|Others|
