@@ -21,4 +21,4 @@ comment: true
 
 3. 위 <b>download</b> 를 클릭하면 지정된 GitHub Repository로 이동, 파일을 내려받을 수 있다.
 
-![exampleImg](https://github.com/UnprettyCoder/unprettycoder.github.io/blob/master/assets/img/example1.png)
+![exampleImg](https://raw.githubusercontent.com/UnprettyCoder/unprettycoder.github.io/master/assets/img/example1.png)
