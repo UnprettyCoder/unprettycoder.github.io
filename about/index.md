@@ -3,7 +3,7 @@ layout: page
 title: About Lab
 tags: [about]
 date: 2020-01-16
-feature: https://www.google.com/url?sa=i&url=https%3A%2F%2Fhackernoon.com%2Fthe-time-hacker-method-12970c47f04f&psig=AOvVaw1Rrm9mGSI_iiXFpsMcK0IL&ust=1579251658465000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMDJxZrhh-cCFQAAAAAdAAAAABAO
+feature: https://hackernoon.com/hn-images/1*TYAzzTJ60x-qg5N81ElU9A.png
 comments: false
 ---
     
