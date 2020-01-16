@@ -10,7 +10,7 @@ comments: false
 
 ## About me
 
-<center>![myProfile](/assets/img/profile.jpg){:height="200px" width="200px"}</center>
+![myProfile](/assets/img/profile.jpg =250x250)
 
 |KEY|VALUE|
 |:---:|:---:|
