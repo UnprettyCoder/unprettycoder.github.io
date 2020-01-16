@@ -10,7 +10,7 @@ comments: false
 
 ## About me
 
-![myProfile](/assets/img/profile.jpg =250x250)
+![myProfile](/assets/img/profile.jpg)
 
 |KEY|VALUE|
 |:---:|:---:|
