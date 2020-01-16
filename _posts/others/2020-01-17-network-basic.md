@@ -4,7 +4,7 @@ title: Network Basic
 date: 2020-01-17
 excerpt: "Computer Network Background Knowledge"
 category: [Network]
-feature: ../../assets/img/network1.png
+feature: ../../assets/img/network2.jpg
 comment: true
 ---
 
