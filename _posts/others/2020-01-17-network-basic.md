@@ -13,7 +13,7 @@ comment: true
 ## INDEX
 
 |Index|contents| |pages|
-|---:|:---|:---:|:---:|
+|:---:|:---:|:---:|:---:|
 |1|기본 지식|------|1 - 4|
 ||
 |2|OSI Reference Model|------|5 - 46|
