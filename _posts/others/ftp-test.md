@@ -5,4 +5,4 @@ category: others
 comment: true
 ---
 
-<a href="https://github.com/UnprettyCoder/unprettycoder.github.io/assets/ftp-files/dummy">clickHere</a>
+<a href="https://github.com/UnprettyCoder/unprettycoder.github.io/master/tree/assets/ftp-files/dummy">clickHere</a>
