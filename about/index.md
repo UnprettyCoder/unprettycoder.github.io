@@ -9,7 +9,10 @@ comments: false
 <center><b>Code Lab</b> is my blog for writing something learned.</center>
 
 ## About me
-![myProfile](assets/img/profile.jpg)
+
+![myProfile](/assets/img/profile.jpg)
+
+|KEY|VALUE|
 |:---:|:---:|
 |`Admin`|UnprettyCoder|
 |`Age`|25|
