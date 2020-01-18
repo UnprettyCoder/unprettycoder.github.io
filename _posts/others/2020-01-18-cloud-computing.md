@@ -8,10 +8,10 @@ feature: ../../assets/img/cloud.jpg
 comment: true
 ---
 
-## Cloud Computing 개론
-#### - 구조와 경제성에 대하여 -
+# Cloud Computing 개론
+##### - 구조와 경제성에 대하여 -
 
-### INDEX
+## INDEX
 1. 클라우드 컴퓨팅의 시작
 2. 클라우드 컴퓨팅이란?
 3. 클라우드 컴퓨팅의 필요성
