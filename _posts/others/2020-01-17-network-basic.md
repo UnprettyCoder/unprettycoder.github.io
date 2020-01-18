@@ -41,7 +41,7 @@ comment: true
 |7|정오표|------|89|
 
 ### What is in?
-##### example img
+##### example img (OSI Reference Model)
 ![networkImg](../../assets/img/computer-network/image07.png)
 
-**Download** : [computer-network](../../assets/ftp-files/Computer-Network.pdf)
+**Download** : [computer-network.png](../../assets/ftp-files/Computer-Network.pdf)
