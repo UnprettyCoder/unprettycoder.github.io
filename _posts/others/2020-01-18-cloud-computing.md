@@ -4,7 +4,7 @@ title: Cloud Computing 개론
 date: 2020-01-18
 excerpt: "Cloud Computing 원리와 경재성"
 category: [others]
-feature: ../../assets/img/network1.png
+feature: ../../assets/img/cloud.jpg
 comment: true
 ---
 
@@ -40,6 +40,6 @@ comment: true
 
 ### What is in?
 ##### example [Cloud Service likened as a Car]
-![Car example](../../assets/img/img.png)
+![Car example](../../assets/img/cloud.jpg)
 
 Download : [Cloud-Computing.pdf](../../assets/ftp-files/Cloud-Computing.pdf)
