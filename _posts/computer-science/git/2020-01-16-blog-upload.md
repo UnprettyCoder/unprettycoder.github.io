@@ -3,7 +3,7 @@ layout: post
 title: Git Blog 파일 첨부
 date: 2020-01-16
 excerpt: "git upload file to link"
-category: [others]
+category: [Git]
 comment: true
 ---
 
