@@ -44,4 +44,4 @@ comment: true
 ##### example img (OSI Reference Model)
 ![networkImg](../../assets/img/computer-network/image07.png)
 
-**Download** : [computer-network.png](../../assets/ftp-files/Computer-Network.pdf)
+**Download** : [computer-network.pdf](../../assets/ftp-files/Computer-Network.pdf)
