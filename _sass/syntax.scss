@@ -1,6 +1,9 @@
 .highlight {
-	pre {
-		background-color: #272822;
+    background-color: #272822;
+    pre {
+		position: relative;
+		margin: 0;
+		padding: 1em;
 	}
 	.hll {
 		background-color: #272822;
