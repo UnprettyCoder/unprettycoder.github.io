@@ -30,7 +30,7 @@ END
 - Preconditions : countries Table은 name, continent, population 필드로 구성
 - Requirements : countries Table에서 continent == "Africa" 인 레코드를 name 기준 오름차순 정렬
 - Solution
-```mysql
+```java
 CREATE PROCEDURE countriesSelection()
 BEGIN
 	select * from countries where continent = "Africa" order by name;
@@ -43,7 +43,7 @@ END
                   scholarship의 값은 연간 장학액수
 - Requirements : scholarship Table에서 id, scholarship을 출력하되, scholarship은 연간이 아니라 월간으로 출력
 - Solution
-```python
+```sql
 CREATE PROCEDURE monthlyScholarships()
 BEGIN
 	select id, scholarship/12 as scholarship from scholarships;
