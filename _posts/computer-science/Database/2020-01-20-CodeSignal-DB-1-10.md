@@ -14,7 +14,7 @@ comment: true
 - Preconditions : Projects Table은 internal_id, project_name, team_size, team_lead, income 필드로 구성
 - Requirements : Projects Table에서 internal_id, team_size 필드 없이 출력
 - Solution
-```java
+```sql
 CREATE PROCEDURE projectList()
 BEGIN
   alter table Projects drop internal_id;
@@ -30,7 +30,7 @@ END
 - Preconditions : countries Table은 name, continent, population 필드로 구성
 - Requirements : countries Table에서 continent == "Africa" 인 레코드를 name 기준 오름차순 정렬
 - Solution
-```java
+```mysql
 CREATE PROCEDURE countriesSelection()
 BEGIN
 	select * from countries where continent = "Africa" order by name;
