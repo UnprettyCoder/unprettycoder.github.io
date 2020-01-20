@@ -30,7 +30,7 @@ END
 - Preconditions : countries Table은 name, continent, population 필드로 구성
 - Requirements : countries Table에서 continent == "Africa" 인 레코드를 name 기준 오름차순 정렬
 - Solution
-```mysql
+```sql
 CREATE PROCEDURE countriesSelection()
 BEGIN
 	select * from countries where continent = "Africa" order by name;
