@@ -14,7 +14,7 @@ comment: true
 - Preconditions : Projects Table은 internal_id, project_name, team_size, team_lead, income 필드로 구성
 - Requirements : Projects Table에서 internal_id, team_size 필드 없이 출력
 - Solution
-~~~
+~~~ java
 CREATE PROCEDURE projectList()
 BEGIN
   alter table Projects drop internal_id;
@@ -43,7 +43,7 @@ END
                   scholarship의 값은 연간 장학액수
 - Requirements : scholarship Table에서 id, scholarship을 출력하되, scholarship은 연간이 아니라 월간으로 출력
 - Solution
-~~~ mysql
+~~~ python
 CREATE PROCEDURE monthlyScholarships()
 BEGIN
 	select id, scholarship/12 as scholarship from scholarships;
