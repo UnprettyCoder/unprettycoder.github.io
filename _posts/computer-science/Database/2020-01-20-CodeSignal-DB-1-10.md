@@ -14,7 +14,7 @@ comment: true
 - Preconditions : Projects Table은 internal_id, project_name, team_size, team_lead, income 필드로 구성
 - Requirements : Projects Table에서 internal_id, team_size 필드 없이 출력
 - Solution
-~~~ mysql
+~~~
 CREATE PROCEDURE projectList()
 BEGIN
   alter table Projects drop internal_id;
