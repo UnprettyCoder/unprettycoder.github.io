@@ -10,7 +10,7 @@ comment: true
 
 ## SELECT
 ------------------
-### SELECT basic skel
+### SELECT basic structure
 ```sql
 SELECT [DISTINCT] `column_1` [AS `col_1_nick`] [,`column_2` [AS `col_2_nick`]] ...
 FROM `table_name`
@@ -60,7 +60,7 @@ WHERE `condition`
   SELECT * FROM students WHERE age = 19 || gender = 0;
   ```
   
-#### last Line
+#### Last Line
 ```sql
 ORDER BY `column_1` [ASC | DESC] [,`column_2` [ASC | DESC]] ... [LIMIT `n` [,`m`]];
 ```
@@ -72,3 +72,13 @@ ORDER BY `column_1` [ASC | DESC] [,`column_2` [ASC | DESC]] ... [LIMIT `n` [,`m`
   ```sql
   SELECT * FROM students WHERE gender = 1 ORDER BY age DESC;
   ```
+- `LIMIT`
+  - SELECT된 자료의 상위 n개 레코드만 출력한다.
+  - 'LIMIT `n`, `m`' 은 자료의 상위 n번째 이후로 m개의 레코드를 출력한다.
+  - EXAMPLE
+  
+  ```sql
+  SELECT * FROM grades ORDER BY math DESC LIMIT 5;
+  SELECT id, name FROM grades ORDER BY english DESC LIMIT 3, 5;
+  ```
+  
