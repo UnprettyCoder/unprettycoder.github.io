@@ -39,4 +39,3 @@ comment: true
   FROM students
   ORDER BY FIELD(LEFT(phone, 3), "010", "016", "011");
   ```
-  ```
