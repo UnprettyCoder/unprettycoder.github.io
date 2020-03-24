@@ -256,7 +256,7 @@ def index(request):
 `polls/templates/polls/index.html`
 
 ```html
-{% \raw %}
+{% raw %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -275,7 +275,7 @@ def index(request):
     {% endif %}
 </body>
 </html>
-{% \endraw %}
+{% endraw %}
 ```
 
 `polls/views.py`
@@ -325,9 +325,11 @@ def detail(request, question_id):
 `polls/templates/polls/detail.html`
 
 ```html
+{% raw %}
 <body>
 	{{ question }}
 </body>
+{% endraw %}
 ```
 
 `polls/views.py` [django.shortcuts 이용]
@@ -344,7 +346,7 @@ def detail(request, question_id):
 `polls/templates/polls/detail.html`
 
 ```html
-{% \raw %}
+{% raw %}
 <body>
 	<h1>{{ question.question_text }}</h1>
     <ul>
@@ -353,7 +355,7 @@ def detail(request, question_id):
     {% endfor %}
     </ul>
 </body>
-{% \endraw %}
+{% endraw %}
 ```
 
 ### 13. Delete Hard-coded URLs
@@ -361,13 +363,13 @@ def detail(request, question_id):
 `polls/templates/polls/index.html`
 
 ```html
-{% \raw %}
+{% raw %}
 <!-- Hard-coded url -->
 <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
 
 <!-- delete Hard-coding -->
 <li><a href="{% url 'detail' question.id %}"> question.question_text </a></li>
-{% \endraw %}
+{% endraw %}
 ```
 
 ### 14. Set URL Namespace
@@ -381,9 +383,9 @@ app_name = 'polls';
 `polls/templates/polls/index.html`
 
 ```html
-{% \raw %}
+{% raw %}
 <li><a href="{% url 'polls:detail' question.id %}">{{ question_text }}</a></li>
-{% \endraw %}
+{% endraw %}
 ```
 
 ### 15. Create simple Form
@@ -391,7 +393,7 @@ app_name = 'polls';
 `polls/templates/polls/detail.html`
 
 ```html
-{% \raw %}
+{% raw %}
 <h1>{{ question.question_text }}</h1>
 
 {% if error_message %}
@@ -405,7 +407,7 @@ app_name = 'polls';
 {% endfor %}
 <input type="submit" value="Vote">
 </form>
-{% \endraw %}
+{% endraw %}
 ```
 
 `polls/views.py`
@@ -443,7 +445,8 @@ def results(request, question_id):
 
 `polls/templates/polls/results.html`
 
-```python
+```html
+{% raw %}
 <h1>{{ question.question_text }}</h1>
 
 <ul>
@@ -453,6 +456,7 @@ def results(request, question_id):
 </ul>
 
 <a href="{% url 'polls:detail' question.id %}">Vote again</a>
+{% endraw %}
 ```
 
 ### 16. Using Generic View
@@ -516,13 +520,13 @@ li a {
 `polls/templates/polls/index.html`
 
 ```html
-{% \raw %}
+{% raw %}
 <head>
 	...
 	{% load static %}
 	<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}"
 </head>
-{% \endraw %}
+{% endraw %}
 ```
 
 ### 18. Customizing Admin Form
