@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Django Web Programming]Polls Project
+title: <Django Web Programming> Polls Project
 date: 2020-03-24
 excerpt: "Polls Project programmed by python django"
 category: [Python]
