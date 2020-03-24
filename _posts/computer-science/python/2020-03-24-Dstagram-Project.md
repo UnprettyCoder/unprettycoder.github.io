@@ -257,6 +257,7 @@ urlpatterns = [
 `templates/base.html`
 
 ```html
+{% raw %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -299,7 +300,7 @@ urlpatterns = [
 
 </body>
 </html>
-	
+{% endraw %}
 ```
 
 `config/settings.py`
@@ -325,6 +326,7 @@ TEMPLATES = [
 `photo/templates/photo/list.html`
 
 ```html
+{% raw %}
 {% extends 'base.html' %}
 
 {% block title %}- List{% endblock %}
@@ -346,6 +348,7 @@ TEMPLATES = [
 		</div>
 	{% endfor %}
 {% endblock %}
+{% endraw %}
 ```
 
 `$ python manage.py runserver`
@@ -353,6 +356,7 @@ TEMPLATES = [
 `photo/templates/photo/upload.html`
 
 ```html
+{% raw %}
 {% extends 'base.html' %}
 
 {% block title %}- Upload{% endblock %}
@@ -370,6 +374,7 @@ TEMPLATES = [
 	<div class="col-md-2"></div>
 </div>
 {% endblock %}
+{% endraw %}
 ```
 
 `enctype`: form 태그로 작성한 정보를 어떤 형태로 인코딩해서 서버로 전달할 것인지 결정하는 옵션
@@ -383,6 +388,7 @@ TEMPLATES = [
 `photo/templates/photo/detail.html`
 
 ```html
+{% raw %}
 {% extends 'base.html' %}
 {% block title %}
 	{{object.text|truncatechars:10}}
@@ -403,11 +409,13 @@ TEMPLATES = [
 		<div class="col-md-2"></div>
 	</div>
 {% endblock %}
+{% endraw %}
 ```
 
 `photo/templates/photo/update.html`
 
 ```html
+{% raw %}
 {% extends 'base.html' %}
 
 {% block title %}- Update{% endblock %}
@@ -425,11 +433,13 @@ TEMPLATES = [
 	<div class="col-md-2"></div>
 </div>
 {% endblock %}
+{% endraw %}
 ```
 
 `photo/templates/photo/delete.html`
 
 ```html
+{% raw %}
 {% extends 'base.html' %}
 
 {% block title %}- Delete{% endblock %}
@@ -450,6 +460,7 @@ TEMPLATES = [
 	<div class="col-md-2"></div>
 </div>
 {% endblock %}
+{% endraw %}
 ```
 
 `config/urls.py`
@@ -505,6 +516,7 @@ urlpatterns = [
 `accounts/templates/registration/login.html`
 
 ```html
+{% raw %}
 {% extends 'base.html' %}
 {% block title %}- Login{% endblock %}
 
@@ -522,11 +534,13 @@ urlpatterns = [
 	<div class="col-md-2"></div>
 </div>
 {% endblock %}
+{% endraw %}
 ```
 
 `accounts/templates/registration/logout.html`
 
 ```html
+{% raw %}
 {% extends 'base.html' %}
 {% block title %}- Logout{% endblock %}
 
@@ -540,14 +554,17 @@ urlpatterns = [
 	<div class="col-md-2"></div>
 </div>
 {% endblock %}
+{% endraw %}
 ```
 
 `templates/base.html`
 
 ```html
+{% raw %}
 <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link">Logout</a></li>
 
 <li class="nav-item"><a href="{% url 'login' %}" class="nav-link">Login</a></li>
+{% endraw %}
 ```
 
 `base.html`에서 `login, logout`의 `href`속성을 수정한다.
@@ -616,6 +633,7 @@ urlpatterns = [
 `accounts/templates/registration/register.html`
 
 ```html
+{% raw %}
 {% extends 'base.html' %}
 
 {% block title %}- Registration{% endblock %}
@@ -634,11 +652,13 @@ urlpatterns = [
 	<div class="col-md-2"></div>
 </div>
 {% endblock %}
+{% endraw %}
 ```
 
 `accounts/templates/registration/register_done.html`
 
 ```html
+{% raw %}
 {% extends 'base.html' %}
 
 {% block title %}- Registration Done{% endblock %}
@@ -653,12 +673,15 @@ urlpatterns = [
 	<div class="col-md-2"></div>
 </div>
 {% endblock %}
+{% endraw %}
 ```
 
 `templates/base.html`
 
 ```html
+{% raw %}
 <a href="{% url 'register' %}" class="nav-link">Signup</a>
+{% endraw %}
 ```
 
 ### Comment Function Implementation with DISQUS
@@ -699,6 +722,7 @@ SITE_ID = 1;
 `photo/templates/photo/detail.html`
 
 ```html
+{% raw %}
 <div class="row">
 	<div class="col-md-2"></div>
 	<div class="col-md-8 panel panel-default">
@@ -707,6 +731,7 @@ SITE_ID = 1;
 	</div>
 	<div class="col-md-2"></div>
 </div>
+{% endraw %}
 ```
 
 ### Control authority
