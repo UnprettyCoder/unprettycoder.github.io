@@ -145,7 +145,7 @@ urlpatterns = [
 `bookmark/templates/bookmark/bookmark_list.html`
 
 ```html
-{% \raw %}
+{% raw %}
 <!-- <html><head> ... -->
 <body>
     <div class="btn-group">
@@ -175,7 +175,7 @@ urlpatterns = [
         </tbody>
     </table>
 </body>
-{% \endraw %}
+{% endraw %}
 ```
 
 `$ python manage.py runserver`
@@ -211,7 +211,7 @@ urlpatterns = [
 `bookmark/templates/bookmark/bookmark_create.html`
 
 ```html
-{% \raw %}
+{% raw %}
 <body>
 	<form action="" method="post">
 		{% csrf_token %}
@@ -220,7 +220,7 @@ urlpatterns = [
 		<input type="submit" value="Add" class="btn btn-info btn-sm">
 	</form>
 </body>
-{% \endraw %}
+{% endraw %}
 ```
 
 `$ python manage.py runserver`
@@ -230,9 +230,9 @@ urlpatterns = [
 `bookmark/templates/bookmark/bookmark_list.html`
 
 ```html
-{% \raw %}
+{% raw %}
 <a href="{% url 'add' %}" class="btn btn-info">Add Bookmark</a>
-{% \endraw %}
+{% endraw %}
 ```
 
 `bookmark_list.html`파일의 `Add Bookmark` 링크가 작동할 수 있도록 `href`를 설정해준다.
@@ -264,20 +264,20 @@ urlpatterns = [
 `bookmark/templates/bookmark/bookmark_detail.html`
 
 ```html
-{% \raw %}
+{% raw %}
 <body>
 	{{ object.site_name }}<br>
 	{{ object.url }}
 </body>
-{% \endraw %}
+{% endraw %}
 ```
 
 `bookmark/templates/bookmark/bookmark_list.html`
 
 ```html
-{% \raw %}
+{% raw %}
 <a href="{% url 'detail' pk=bookmark.id %}">{{ bookmark.site_name }}</a>
-{% \endraw %}
+{% endraw %}
 ```
 
 `bookmark_list.html`에 상세 정보를 보여줄 수 있도록 `href`를 수정한다.
@@ -307,22 +307,22 @@ urlpatterns = [
 `bookmark/templates/bookmark/bookmark_update.html`
 
 ```html
-{% \raw %}
+{% raw %}
 <body>
 	<form action="" method="post">
 	{% csrf_token %}
 	{{ form.as_p }}
 	<input type="submit" value="Update" class="btn btn-info btn-sm">
 </body>	
-{% \endraw %}
+{% endraw %}
 ```
 
 `bookmark/templates/bookmark/bookmark_list.html`
 
 ```html
-{% \raw %}
+{% raw %}
 <a href="{% url 'update' pk=bookmark.id %}" class="btn btn-success btn-sm">Modity</a>
-{% \endraw %}
+{% endraw %}
 ```
 
 `bookmark/models.py`
@@ -360,9 +360,9 @@ urlpatterns = [
 `bookmark/templates/bookmark/bookmark_list.html`
 
 ```html
-{% \raw %}
+{% raw %}
 <a href="{% url 'delete' pk=bookmark.id %}" class="btn btn-danger btn-sm">Delete</a>
-{% \endraw %}
+{% endraw %}
 ```
 
 `bookmark_list.html`의 Delete 부분 `href`를 수정하여 목록 제거 작업을 수행할 수 있도록 한다.
@@ -372,7 +372,7 @@ urlpatterns = [
 `bookmark/templates/bookmark/bookmark_confirm_delete.html`
 
 ```html
-{% \raw %}
+{% raw %}
 <body>
 	<form action="" method="post">
 		{% csrf_token %}
@@ -380,7 +380,7 @@ urlpatterns = [
 		<input type="submit" value="Delete" class="btn btn-danger">
 	</form>
 </body>
-{% \endraw %}
+{% endraw %}
 ```
 
 삭제를 실수로 누를 때를 대비하여 재확인 페이지를 구현하여 확인한다.
@@ -414,7 +414,7 @@ TEMPLATES = [
 `templates/base.html`
 
 ```html
-{% \raw %}
+{% raw %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -427,7 +427,7 @@ TEMPLATES = [
 	{% endblock %}
 </body>
 </html>
-{% \endraw %}
+{% endraw %}
 ```
 
 `block`: 기준 템플릿에 다른 템플릿에서 껴넣을 공간을 `block` 태크를 사용해 만들어두고 하위 템플릿에서는 이 블록에 껴넣을 내용을 결정하여 내용을 채운다.
@@ -435,7 +435,7 @@ TEMPLATES = [
 `bookmark/templates/bookmark/bookmark_confirm_delete.html`
 
 ```html
-{% \raw %}
+{% raw %}
 {% extends 'base.html' %}
 
 {% block title %}Confirm Delete{% endblock %}
@@ -448,7 +448,7 @@ TEMPLATES = [
 </form>
 
 {% endblock %}
-{% \endraw %}
+{% endraw %}
 ```
 
 `extends`: 상속해 올 기준이 되는 템플릿을 지정
@@ -456,7 +456,7 @@ TEMPLATES = [
 `bookmark/templates/bookmark/bookmark_create.html`
 
 ```html
-{% \raw %}
+{% raw %}
 {% extends 'base.html' %}
 
 {% block title %}Bookmark Add{% endblock %}
@@ -467,13 +467,13 @@ TEMPLATES = [
 	{{ form.as_p }}
 </form>
 {% endblock %}
-{% \endraw %}
+{% endraw %}
 ```
 
 `bookmark/templates/bookmark/bookmark_detail.html`
 
 ```html
-{% \raw %}
+{% raw %}
 {% extends 'base.html' %}
 
 {% block title %}Detail{% endblock %}
@@ -482,13 +482,13 @@ TEMPLATES = [
 {{ object.site_name }}<br>
 {{ object.url }}
 {% endblock %}
-{% \endraw %}
+{% endraw %}
 ```
 
 `bookmark/templates/bookmark/bookmark_list.html`
 
 ```html
-{% \raw %}
+{% raw %}
 {% extends 'base.html' %}
 
 {% block title %}Bookmark List{% endblock %}
@@ -521,13 +521,13 @@ TEMPLATES = [
         </tbody>
 </table>
 {% endblock %}
-{% \endraw %}
+{% endraw %}
 ```
 
 `bookmark/templates/bookmark/bookmark_update.html`
 
 ```html
-{% \raw %}
+{% raw %}
 {% extends 'base.html' %}
 
 {% block title %}Bookmark Update{% endblock %}
@@ -539,7 +539,7 @@ TEMPLATES = [
 	<input type="submit" value="Update" class="btn btn-info btn-sm">
 </form>
 {% endblock %}
-{% \endraw %}
+{% endraw %}
 ```
 
 지금까지 템플릿의 확장을 이용하지 않고 작성했던 `html`파일들을 모두 `base.html`에서 확장한 형태로 수정한다.
@@ -555,7 +555,7 @@ TEMPLATES = [
 `templates/base.html`
 
 ```html
-{% \raw %}
+{% raw %}
 <head>
 	<!-- skip other contents -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -563,7 +563,7 @@ TEMPLATES = [
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
-{% \endraw %}
+{% endraw %}
 ```
 
 이것을 적용한 것 만으로도 페이지의 디자인이 훨씬 더 아름다워진다. <class attr>
@@ -575,7 +575,7 @@ TEMPLATES = [
 `templates/base.html`
 
 ```html
-{% \raw %}
+{% raw %}
 <!-- <body> 내부 -->
 <div class="container">
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -603,7 +603,7 @@ TEMPLATES = [
         </div>
     </div>
 </div>
-{% \endraw %}
+{% endraw %}
 ```
 
 ### Add Paging-Function
@@ -619,7 +619,7 @@ class BookmarkListView(ListView):
 `bookmark/templates/bookmark/bookmark_list.html`
 
 ```html
-{% \raw %}
+{% raw %}
 {% block pagination %}
 	{% if is_paginated %}
 		<ul class="pagination justify-content-center pagination-sm">
@@ -651,7 +651,7 @@ class BookmarkListView(ListView):
 		</ul>
 	{% endif %}
 {% endblock %}
-{% \endraw %}
+{% endraw %}
 ```
 
 이제 북마크 목록 페이지에 1 페이지에 6 항목씩 출력되는 페이징 기능이 추가되었다.
@@ -677,10 +677,10 @@ body {
 `templates/base.html`
 
 ```html
-{% \raw %}
+{% raw %}
 {% load static %}
 <link rel="stylesheet" href="{% static 'style.css' %}">
-{% \endraw %}
+{% endraw %}
 ```
 
 ----------------
