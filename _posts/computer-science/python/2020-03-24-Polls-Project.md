@@ -256,6 +256,7 @@ def index(request):
 `polls/templates/polls/index.html`
 
 ```html
+{% \raw %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -274,6 +275,7 @@ def index(request):
     {% endif %}
 </body>
 </html>
+{% \endraw %}
 ```
 
 `polls/views.py`
@@ -342,6 +344,7 @@ def detail(request, question_id):
 `polls/templates/polls/detail.html`
 
 ```html
+{% \raw %}
 <body>
 	<h1>{{ question.question_text }}</h1>
     <ul>
@@ -350,6 +353,7 @@ def detail(request, question_id):
     {% endfor %}
     </ul>
 </body>
+{% \endraw %}
 ```
 
 ### 13. Delete Hard-coded URLs
@@ -357,11 +361,13 @@ def detail(request, question_id):
 `polls/templates/polls/index.html`
 
 ```html
+{% \raw %}
 <!-- Hard-coded url -->
 <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
 
 <!-- delete Hard-coding -->
 <li><a href="{% url 'detail' question.id %}"> question.question_text </a></li>
+{% \endraw %}
 ```
 
 ### 14. Set URL Namespace
@@ -375,7 +381,9 @@ app_name = 'polls';
 `polls/templates/polls/index.html`
 
 ```html
+{% \raw %}
 <li><a href="{% url 'polls:detail' question.id %}">{{ question_text }}</a></li>
+{% \endraw %}
 ```
 
 ### 15. Create simple Form
@@ -383,6 +391,7 @@ app_name = 'polls';
 `polls/templates/polls/detail.html`
 
 ```html
+{% \raw %}
 <h1>{{ question.question_text }}</h1>
 
 {% if error_message %}
@@ -396,6 +405,7 @@ app_name = 'polls';
 {% endfor %}
 <input type="submit" value="Vote">
 </form>
+{% \endraw %}
 ```
 
 `polls/views.py`
@@ -506,11 +516,13 @@ li a {
 `polls/templates/polls/index.html`
 
 ```html
+{% \raw %}
 <head>
 	...
 	{% load static %}
 	<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}"
 </head>
+{% \endraw %}
 ```
 
 ### 18. Customizing Admin Form
